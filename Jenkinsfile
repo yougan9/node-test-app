@@ -1,5 +1,6 @@
-
-node('nodejs') {
+Pipeline{
+    agent { label 'nodejs' }
+    stages{
     stage('test npm') {
         sh("node --version")
         sh("npm --version")
@@ -48,3 +49,4 @@ node('nodejs') {
         sh("oc expose svc/hello-react --name=hello-react")
     }
 }
+

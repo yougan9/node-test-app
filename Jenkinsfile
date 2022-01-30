@@ -1,6 +1,4 @@
-#def gitRepo="https://github.com/ariemay/node-test-app.git"
-#def branch="master"
- 
+
 node('nodejs') {
     stage('test npm') {
         sh("node --version")

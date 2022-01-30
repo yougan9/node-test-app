@@ -5,9 +5,7 @@ node('nodejs') {
         sh("npm --version")
         sh("oc whoami")
     }
-    stage ('pull code') {
-        git branch: branch, url: gitRepo
-    }
+    
     stage ('build') {
         sh("npm install")
         sh("npm run build")
